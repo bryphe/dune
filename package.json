@@ -1,0 +1,25 @@
+{
+  "name": "dune",
+  "version": "9.9.9",
+  "esy": {
+	  "build": [
+	    [
+	      "ocaml",
+	      "bootstrap.ml"
+	    ],
+	    [
+	      "./boot.exe",
+	      "--release",
+	      "-j",
+	      "4"
+	    ]
+	  ],
+          "buildsInSource": true
+  },
+  "peerDependencies": {
+    "ocaml": "~4.6.0"
+  },
+  "dependencies": {
+    "ocaml": "~4.6.0"
+  }
+}
