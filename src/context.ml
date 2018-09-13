@@ -465,7 +465,6 @@ let create ~(kind : Kind.t) ~path ~env ~env_nodes ~name ~merlin ~targets
       set t.ocamlc;
       Option.iter t.ocamlopt ~f:set;
       set t.ocamldep;
-      set t.ocamlmklib
     end;
     Fiber.return t
   in
