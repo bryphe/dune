@@ -137,7 +137,7 @@ let which ~cache ~path x =
   Hashtbl.find_or_add cache x ~f:(Bin.which ~path)
 
 let ocamlpath_sep =
-  if Sys.cygwin then
+  if Sys.cygwin or Sys.win32 then
     (* because that's what ocamlfind expects *)
     ';'
   else
